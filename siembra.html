@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="estilo.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reguladora de siembra</title>
+   <script src="scripts.js"></script>
+   <style> html {background-color:  #008117;} </style>
+   
+</head>
+<body>
+
+   <div class= "contenedor">
+   
+   <div class = "titulocal">
+      <div class ="enca-a">
+         <button id= "volver" class = "boton-redondo" onclick = "volver ()">
+         <img src="volver.png"></button>
+         <button id= "info" class = "boton-redondo" onclick = "info ()">
+         <img src="logoa.png"></button>
+      </div>
+
+      <div class ="enca-b">
+         <span class= "cab"><img src= "logos.png" width="60%" ></span>
+      </div>
+
+      <div class ="enca-c">
+         <button id= "refresh" class = "boton-redondo" onclick = "refresh ()">
+         <img src="refresh.png"></button>
+      </div>
+   </div>
+
+
+   <div class= "planilla">
+
+      <label class= "introcal" style= "font-size: 150%;"><center>CALCULO PARA SIEMBRA</center></label>
+      <br>
+      <label for="datos1" class= "datoreq">Plantas por hectárea (n)</label>
+      <input type="number" class= "campo-llenar" id="valor1"><center></center>
+      <br>
+      <label for="datos2" class="datoreq"> Distancia de surcos (m) </label>
+      <input type="number" class= "campo-llenar" id="valor2"><center></center>
+      <br>
+      
+      <div class="datosmenores">
+         <label for="datos3" class= "datoreq2">PG %</label> 
+         <label for="datos4" class="datoreq2 ">EI %</label>
+      </div>
+      <div class="datosmenores">
+         <input type="number" class= "campo-llenar2" id="valor3"><center></center>
+         <input type="number" class= "campo-llenar2" id="valor4"><center></center>
+      </div>
+
+      <br>
+      <button class = "botoncal" onclick = "semb ()" > CALCULAR </button>
+
+   </div>
+
+      <div class= "resultados">
+         <br>
+         <label class = "respuestaque" id="res1"><center>Semillas por hectárea:  --</center></label>
+         <br>
+         <label class = "respuestaque" id="res2"><center>Semillas por metro cuadrado:  --</center></label>
+         <br>
+         <label class = "respuestaque" id="res3"><center>Semillas por metro lineal:  --</center></label>
+         <br>
+      </div>
+
+   </div>
+
+   <div class="avisodiv" id="divav">
+         <label id="cartel" class ="aviso"><br>INGRESE UN VALOR EN TODOS LOS CAMPOS</label>
+         <label id="infor" class ="informacion"> <br>En esta pagína se calculan las semillas necesarias para el cultivo de una hectárea y sus distribuciones agregando los datos de: semillas por hectarea; distancia de surcos; poder germinativo (PG) y eficacia de implantación (EI).<br> </label>
+   </div>
+
+</body>
+
+</html>

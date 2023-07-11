@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="estilo.css">
+   <title>Reguladora de fertilizante</title>
+   <script src="scriptf.js"></script>
+   <style> html {background-color:  #008117;} </style>
+   
+</head>
+<body>
+
+<div class="contenedor">
+
+   <div class = "titulocal">
+      <div class ="enca-a">
+         <button id= "volver" class = "boton-redondo" onclick = "volver ()">
+         <img src="volver.png"></button>
+         <button id= "info" class = "boton-redondo" onclick = "info ()">
+         <img src="logoa.png"></button>
+      </div>
+
+      <div class ="enca-b">
+         <span class = "cab"><img class ="logo" src= "logof.png" width="60%" ></span>
+      </div>
+
+      <div class ="enca-c">
+         <button id= "refresh" class = "boton-redondo" onclick = "refresh ()">
+         <img src="refresh.png"></button>
+      </div>
+   </div>
+
+   <div class= "planilla">
+
+      <label class= "introcal" style ="font-size: 150%";><center> CALCULO PARA FERTILIZANTE <br> Y SEMILLAS A CHORRILLO</center></label>
+      <br>
+      <label for="datos1" class= "datoreq">Número de surcos (n)</label>
+      <input type="number" class= "campo-llenar" id="valor1"><center></center>
+      <br>
+      <label for="datos2" class="datoreq"> Distancia de surcos (m) </label>
+      <input type="number" class= "campo-llenar" id="valor2"><center></center>
+      <br>
+      <label for="datos3" class="datoreq"> Kilogramos por hectárea (kg/ha) </label>
+      <input type="number" class= "campo-llenar" id="valor3"><center></center>
+      <br>
+      <select id="opciones" onchange="opcion()" class = "campo-llenar3">
+         <option value="" disabled selected color: #A3A3A3 class="opcionn">Medición de distancia</option>
+         <option value="opcion1" class="opcionn" >Distancia entre puntos</option>
+         <option value="opcion2" class="opcionn" >Distancias por vueltas</option>
+      </select>
+      
+      <div class="datosmenores">
+         <label id="vueltas" for="datos6" style= "display:none" class= "datoreq2 ">
+               Vueltas de <br> rueda (n)</label>
+         <label id="diametro" for="datos7" style= "display:none" class="datoreq2"> 
+               diametro (m)</label>
+      </div>
+
+      <div class="datosmenores">
+         <input type="number" class= "campo-llenar2" id="valor6" style= "display:none">
+         <center></center>
+         <input type="number" class= "campo-llenar2" id="valor7" style= "display:none">
+         <center></center>
+      </div>
+
+      <div class="datosmenores">
+         <label id="puntos" for="datos5"  class ="datoreq" style= "display:none">
+            Distancia entre puntos (m)</label>
+      </div>
+      <div class="datosmenores">
+         <input type="number" class="campo-llenar" id="valor5" style= "display:none">
+         <center></center>
+      </div>
+
+      <br>
+      <button class = "botoncal" onclick = "semb ()" > CALCULAR </button>
+
+   </div>
+
+   <div class= "resultados">
+      <br>
+      <label class = "respuestaque" id="res1"><center>Superficie de medición:  --</center></label>
+      <br>
+      <label class = "respuestaque" id="res2"><center>Kilos totales:  --</center></label>
+      <br>
+      <label class = "respuestaque" id="res3"><center>Gramos por surco:  --</center></label>
+      <br>
+   </div>
+</div>
+
+   <div class="avisodiv" id="divav">
+         <label id="cartel" class ="aviso"><br>INGRESE UN VALOR EN TODOS LOS CAMPOS</label>
+         <label id="cartel2" class ="aviso"><br>INGRESE TODOS LOS VALORES Y SELECCIONE UN MÉTODO DE MEDICIÓN</label>
+         <label id="cartel3" class ="aviso"><br>SELECCIONE UN MÉTODO DE MEDICIÓN</label>
+         <label id="infor" class ="informacion"> <br>En esta pagína se calculan las cantidades necesarias de fertilizantes o bien las semillas para la siembra a chorrillo, ingresando el número de surcos, la distancia entre ellos, los kilogramos por hectárea y la distancia entre los puntos. Controle haber seleccionado un sistema de medición para este último.<br> </label>
+   </div>
+
+</body>
+
+</html>
